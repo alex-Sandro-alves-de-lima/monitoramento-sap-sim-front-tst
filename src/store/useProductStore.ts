@@ -1,11 +1,7 @@
 
+import { Product } from "@/types/product";
 import { create } from "zustand";
 
-type Product = {
-  id: string;
-  nome: string;
-  preco: number;
-};
 
 type State = {
   selectedProduct: Product | null;

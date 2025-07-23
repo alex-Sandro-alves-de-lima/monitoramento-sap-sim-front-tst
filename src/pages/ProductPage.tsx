@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useProducts } from "@/hooks/useProducts";
 import { useProductStore } from "@/store/useProductStore";
+import { Product } from "@/types/product";
+import { Card, Image } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 export function ProductPage() {
   const { list, create } = useProducts();
@@ -22,9 +25,9 @@ export function ProductPage() {
       <h1>Produtos</h1>
 
       <ul>
-        {list.data?.map((produto: any) => (
+        {list.data?.map((produto: Product) => (
           <li key={produto.id} onClick={() => setSelectedProduct(produto)}>
-            {produto.nome} - R$ {produto.preco}
+            {produto.description} - R$ {produto.price}
           </li>
         ))}
       </ul>
@@ -35,9 +38,21 @@ export function ProductPage() {
       <button onClick={handleSubmit}>Criar</button>
 
       {selectedProduct && (
+        <>
         <p>
-          Produto selecionado: {selectedProduct.nome} - R$ {selectedProduct.preco}
+          Produto selecionado: {selectedProduct.description} - R$ {selectedProduct.description}
         </p>
+          <Card 
+           title={selectedProduct.description}
+           extra= {<DownOutlined/>}
+           style={{width: 300}}>
+            <Image
+            width={150}
+            src={selectedProduct.thumbnail}
+            />
+
+        </Card>
+      </>
       )}
     </div>
   );

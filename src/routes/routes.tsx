@@ -15,6 +15,7 @@ import Payment from '@/pages/Payment/Payment';
 import Manutencao from '@/pages/manutencao.page';
 import Analise from '@/pages/Analise/analise';
 import Processamento from '@/pages/Processamento/processamento';
+import { ProductPage } from '@/pages/ProductPage';
 const router = createBrowserRouter([
   {
     // Rota principal
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
         {        path: "4", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Processamento/></PrivateRoute>),},    
         {        path: "5", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Payment/></PrivateRoute>),},    
         {        path: "6", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Movimento/></PrivateRoute>),},            
+        {        path: "7", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><ProductPage/></PrivateRoute>),},            
      { path: '*', element: <ErrorPage />  }
     ],
     }, //Rota publica
