@@ -13,19 +13,4 @@ export default defineConfig({
        "@": path.resolve(__dirname, "src"),
     },
   },
-   css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-        modifyVars: {
-          '@primary-color': '#005bac', // azul GPA
-          '@font-size-base': '14px',
-          '@border-radius-base': '6px',
-          '@layout-body-background': '#f5f6fa',
-          '@layout-header-background': '#001529',
-          '@text-color': '#2c3e50',
-        },
-      },
-    },
-  },
 })

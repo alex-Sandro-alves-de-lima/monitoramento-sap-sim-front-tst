@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 
-
 /*Controle de rotas controlador de passagem pelo sistema */
 interface PrivateRouteProps {
   children: ReactNode;

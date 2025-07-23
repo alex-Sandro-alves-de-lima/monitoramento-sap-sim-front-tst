@@ -29,9 +29,7 @@ const router = createBrowserRouter([
         {        path: "3", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Bandeira/></PrivateRoute>),},    
         {        path: "4", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Processamento/></PrivateRoute>),},    
         {        path: "5", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Payment/></PrivateRoute>),},    
-        {        path: "6", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Movimento/></PrivateRoute>),},    
-      
-        
+        {        path: "6", element: ( <PrivateRoute tela='/painel/Monitoramento' role='Admin'><Movimento/></PrivateRoute>),},            
      { path: '*', element: <ErrorPage />  }
     ],
     }, //Rota publica
